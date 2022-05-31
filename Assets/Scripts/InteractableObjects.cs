@@ -18,6 +18,12 @@ public class InteractableObjects : MonoBehaviour
     public static int numOfFans;
     public static bool ramDone;
     public Canvas iGCanvas;
+
+    public GameObject MB;
+    public GameObject PU;
+    public GameObject CPU;
+    public GameObject GPU;
+    public GameObject CPUCOOL;
     static bool onlyOnceRAM, onlyOnceRAM2, onlyOnceFAN1, onlyOnceFAN2, onlyOnceFAN3;
     // Start is called before the first frame update
     void Start()
@@ -40,6 +46,12 @@ public class InteractableObjects : MonoBehaviour
         //iGCanvas = GameObject.Find("ingameCanvas").GetComponent<Canvas>();
         MotherBoard = GameObject.Find("jarst_motherboard_2");
         // this.gameObject.GetComponent<Rigidbody>().useGravity = false;
+       // MB = GameObject.Find("jarst_motherboard_2 (1)");
+        PU = GameObject.Find("jarst_power_supply_2 (1)");
+        CPU = GameObject.Find("jarst_processor_11 (1)");
+        GPU = GameObject.Find("jarst_graphics_card_1 (1)");
+        CPUCOOL = GameObject.Find("jarst_cooling_unit (1)");
+       // MB.SetActive(false);
     }
 
     // Update is called once per frame
@@ -59,11 +71,18 @@ public class InteractableObjects : MonoBehaviour
 
         if (this.gameObject.transform.name.Contains("placeCollider")) { 
         if (this.gameObject.transform.parent.name.Contains("motherboard") && collider.gameObject.name.Contains("motherboard_col")) {
-            this.gameObject.transform.parent.parent = PC.transform;
-            this.gameObject.transform.parent.position = new Vector3(0.216000006f, 0.59799999f, 0.838f);
-            this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
-            this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
-               motherBoardDone = true;
+
+                //this.gameObject.transform.parent.gameObject.SetActive(false);
+                //MB.gameObject.SetActive(true);
+                //MB.gameObject.transform.parent = PC.transform;
+                //MB.gameObject.transform.position = new Vector3(0.216000006f, 0.59799999f, 0.838f);
+                //MB.gameObject.transform.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
+                this.gameObject.transform.parent.parent = PC.transform;
+                this.gameObject.transform.parent.position = new Vector3(0.216000006f, 0.59799999f, 0.838f);
+                this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
+                this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
+
+                motherBoardDone = true;
                 iGCanvas.gameObject.transform.GetChild(7).gameObject.GetComponent<Image>().color = Color.green;
         } }
 
@@ -74,10 +93,15 @@ public class InteractableObjects : MonoBehaviour
                 && collider.gameObject.name.Contains("power_col") && this.gameObject.transform.parent.localRotation.y < 0.85f
                 && this.gameObject.transform.parent.localRotation.y > 0.6f)
             {
-                this.gameObject.transform.parent.parent = PC.transform;
-                this.gameObject.transform.parent.position = new Vector3(0.250999987f, 0.737999976f, 0.508000016f);
-                this.gameObject.transform.parent.rotation = new Quaternion(0.707106829f, 0.707106829f, 0, 0);
-                this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
+                this.gameObject.transform.parent.gameObject.SetActive(false);
+                PU.gameObject.SetActive(true);
+                PU.gameObject.transform.parent = PC.transform;
+                PU.gameObject.transform.position = new Vector3(0.250999987f, 0.737999976f, 0.508000016f);
+                PU.gameObject.transform.rotation = new Quaternion(0.707106829f, 0.707106829f, 0, 0);
+                //this.gameObject.transform.parent.parent = PC.transform;
+                //this.gameObject.transform.parent.position = new Vector3(0.250999987f, 0.737999976f, 0.508000016f);
+                //this.gameObject.transform.parent.rotation = new Quaternion(0.707106829f, 0.707106829f, 0, 0);
+                //this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 powerDone = true;
                 iGCanvas.gameObject.transform.GetChild(11).gameObject.GetComponent<Image>().color = Color.green;
             }
@@ -88,10 +112,16 @@ public class InteractableObjects : MonoBehaviour
             if (this.gameObject.transform.parent.name.Contains("processor_11") && powerDone == true
                 && collider.gameObject.name.Contains("cpu_col") && CPUDone == false)
             {
-                this.gameObject.transform.parent.parent = MotherBoard.transform;
-                this.gameObject.transform.parent.position = new Vector3(-0.204467237f, 0.6045403516f, 0.612131468f);
-                this.gameObject.transform.parent.rotation = new Quaternion(0, 0, 0, 0.707106829f);
-                this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
+                this.gameObject.transform.parent.gameObject.SetActive(false);
+                CPU.gameObject.SetActive(true);
+                MotherBoard = GameObject.Find("jarst_motherboard_2");
+                CPU.gameObject.transform.parent = MotherBoard.transform;
+                CPU.gameObject.transform.position = new Vector3(-0.204467237f, 0.6045403516f, 0.612131468f); 
+                CPU.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0.707106829f);
+                //this.gameObject.transform.parent.parent = MotherBoard.transform;
+                //this.gameObject.transform.parent.position = new Vector3(-0.204467237f, 0.6045403516f, 0.612131468f);
+                //this.gameObject.transform.parent.rotation = new Quaternion(0, 0, 0, 0.707106829f);
+                //this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 CPUDone = true;
                 iGCanvas.gameObject.transform.GetChild(9).gameObject.GetComponent<Image>().color = Color.green;
             }
@@ -101,11 +131,15 @@ public class InteractableObjects : MonoBehaviour
             if (this.gameObject.transform.parent.name.Contains("cooling_unit") && CPUDone == true
                 && collider.gameObject.name.Contains("fancpu_col"))
             {
-                MotherBoard = GameObject.Find("jarst_motherboard_2");
-                this.gameObject.transform.parent.parent = MotherBoard.transform;
-                this.gameObject.transform.parent.position = new Vector3(-0.204467237f, 0.6045403516f, 0.612131468f);
-                this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
-                this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
+                this.gameObject.transform.parent.gameObject.SetActive(false);
+                CPUCOOL.gameObject.SetActive(true);
+                CPUCOOL.gameObject.transform.parent = MotherBoard.transform;
+                CPUCOOL.gameObject.transform.position = new Vector3(-0.204467237f, 0.6045403516f, 0.612131468f);
+                CPUCOOL.gameObject.transform.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
+                //this.gameObject.transform.parent.parent = MotherBoard.transform;
+                //this.gameObject.transform.parent.position = new Vector3(-0.204467237f, 0.6045403516f, 0.612131468f);
+                //this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
+                //this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 CPUFanDone = true;
                 iGCanvas.gameObject.transform.GetChild(9).gameObject.GetComponent<Image>().color = Color.green;
             }
@@ -114,13 +148,17 @@ public class InteractableObjects : MonoBehaviour
         if (this.gameObject.transform.name.Contains("placeColliderGPU"))
         {
             if (this.gameObject.transform.parent.name.Contains("graphics_card") && CPUFanDone == true
-                && collider.gameObject.name.Contains("graphic_col") && this.gameObject.transform.parent.localRotation.y > 0.65f
-                && this.gameObject.transform.parent.localRotation.y <0.95f)
+                && collider.gameObject.name.Contains("graphic_col"))
             {
-                this.gameObject.transform.parent.parent = MotherBoard.transform;
-                this.gameObject.transform.parent.position = new Vector3(0.016000006f, 0.59999999f, 0.55f);
-                this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
-                this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
+                this.gameObject.transform.parent.gameObject.SetActive(false);
+                GPU.gameObject.SetActive(true);
+                GPU.gameObject.transform.parent = MotherBoard.transform;
+                GPU.gameObject.transform.position = new Vector3(0.016000006f, 0.59999999f, 0.55f);
+                GPU.gameObject.transform.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
+                //this.gameObject.transform.parent.parent = MotherBoard.transform;
+                //this.gameObject.transform.parent.position = new Vector3(0.016000006f, 0.59999999f, 0.55f);
+                //this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
+                //this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 GPUDone = true;
                 iGCanvas.gameObject.transform.GetChild(8).gameObject.GetComponent<Image>().color = Color.green;
                 //this.gameObject.transform.parent.
@@ -132,6 +170,8 @@ public class InteractableObjects : MonoBehaviour
             if (this.gameObject.transform.parent.name.Contains("RAM") && GPUDone == true
                 && collider.gameObject.name.Contains("RAM1_col"))
             {
+
+                MotherBoard = GameObject.Find("jarst_motherboard_2 (1)");
                 this.gameObject.transform.parent.parent = MotherBoard.transform;
                 this.gameObject.transform.parent.position = new Vector3(-0.204467237f, 0.6045403516f, 0.7392131468f);
                 this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
@@ -154,8 +194,10 @@ public class InteractableObjects : MonoBehaviour
                 //&& this.gameObject.transform.parent.localRotation.y < 0.95f
                 )
             {
+
+                MotherBoard = GameObject.Find("jarst_motherboard_2 (1)");
                 this.gameObject.transform.parent.parent = MotherBoard.transform;
-                this.gameObject.transform.parent.position = new Vector3(-0.204467237f, 0.6045403516f, 0.767131468f);
+                this.gameObject.transform.parent.position = new Vector3(-0.204467237f, 0.6045403516f, 0.797131468f);
                 this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f); ;
                 this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 ramDone = true;
