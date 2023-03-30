@@ -172,7 +172,7 @@ public class InteractableObjects : MonoBehaviour
             {
 
                 MotherBoard = GameObject.Find("jarst_motherboard_2 (1)");
-                this.gameObject.transform.parent.parent = MotherBoard.transform;
+                //this.gameObject.transform.parent.parent = MotherBoard.transform;
                 this.gameObject.transform.parent.position = new Vector3(-0.204467237f, 0.6045403516f, 0.7392131468f);
                 this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
                 this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
@@ -196,7 +196,7 @@ public class InteractableObjects : MonoBehaviour
             {
 
                 MotherBoard = GameObject.Find("jarst_motherboard_2 (1)");
-                this.gameObject.transform.parent.parent = MotherBoard.transform;
+                //this.gameObject.transform.parent.parent = MotherBoard.transform;
                 this.gameObject.transform.parent.position = new Vector3(-0.204467237f, 0.6045403516f, 0.797131468f);
                 this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f); ;
                 this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
