@@ -20,9 +20,10 @@ public class CanvasMng : MonoBehaviour
     private float LastTimeSet = 0.0f;
     private bool startTimer = false;
 
-    private List<float> componentTimes;
+    public List<float> componentTimes;
 
     public int numOfFans;
+
 
     public Canvas mainCanvas;
     public Canvas setCanvas;
@@ -54,7 +55,7 @@ public class CanvasMng : MonoBehaviour
 
         gearBtn = ingameCanvas.gameObject.transform.GetChild(0).gameObject.GetComponent<Button>();
 
-        endGameCanvas.gameObject.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(exitClicked);// go to new scene where the test is in the classroom
+        endGameCanvas.gameObject.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(goToClassroom);// go to new scene where the test is in the classroom
 
         startTime = Time.time;
 
@@ -96,6 +97,10 @@ public class CanvasMng : MonoBehaviour
         Application.Quit();
     }
 
+    void goToClassroom() {
+        SceneManager.LoadScene("Classroom");
+    }
+
     void doneClicked() {
 
         if (InteractableObjects.cablesDone == false)
@@ -133,6 +138,7 @@ public class CanvasMng : MonoBehaviour
   
     void gameOver() {
 
+        int br = 0;
         mainCanvas.gameObject.SetActive(false);
         ingameCanvas.gameObject.SetActive(false);
         endGameCanvas.gameObject.SetActive(true);
@@ -142,9 +148,16 @@ public class CanvasMng : MonoBehaviour
             "CPU: i7-8400H \n" +
             "GPU: Asus Rog GTX 770\n" +
             "SPACE: 1TB HDD\n" +
-            "RAM: " + InteractableObjects.ramsConnected*8+"Gb \n" +
+            "RAM: " + InteractableObjects.ramsConnected * 8 + "Gb \n" +
             "POWER: 620W\n" +
             "FANS: " + InteractableObjects.numOfFans;
+
+
+        foreach (float f in componentTimes)
+        {
+            br++;
+            endGameCanvas.gameObject.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = endGameCanvas.gameObject.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text + "\n Component "+br+ ":  " + f;
+        }
 
         int sakri = GameObject.Find("Objects").gameObject.transform.childCount;
         GameObject objects = GameObject.Find("Objects").gameObject;
