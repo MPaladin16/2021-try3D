@@ -19,7 +19,7 @@ public class CanvasMng : MonoBehaviour
     private float Timer = 0.0f;
     private float LastTimeSet = 0.0f;
     private bool startTimer = false;
-
+    private int f = 0;
     public List<float> componentTimes;
 
     public int numOfFans;
@@ -241,6 +241,7 @@ public class CanvasMng : MonoBehaviour
 
         if (InteractableObjects.motherBoardDone == false)
         {
+            f = 0;
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text =
                 "Find the Motherboard and place it inside the computer case, facing the right direction \n" +
                 "it is super important to place the screws into the edges of the motherboard \n" +
@@ -248,48 +249,66 @@ public class CanvasMng : MonoBehaviour
         }
         else if (InteractableObjects.powerDone == false)
         {
-            componentTimes.Add(Timer - LastTimeSet);
-            LastTimeSet = Timer;
+            if (f == 0)
+            {
+                componentTimes.Add(Timer - LastTimeSet);
+                f = 1;
+            }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
                 "Find the Power unit and place it into the correct place inside the computer case \n" +
                 "The power unit, in this case, should be placed at the bottom of the pc with its fan facing out of the box";
         }
         else if (InteractableObjects.CPUDone == false)
         {
-            componentTimes.Add(Timer - LastTimeSet);
-            LastTimeSet = Timer;
-            timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
+            if (f == 1)    
+            { 
+                componentTimes.Add(Timer - componentTimes[0]);
+                f = 2;
+            }
+        timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
                 "Find the processor and place it into the right place on the motherboard \n" +
                 "after placing the processor, we use a small amount of thermal paste \n" +
                 "before putting the fan/cooler on it (We are not going to do this part in the tutorial, but it is mandatory)";
         }
         else if (InteractableObjects.CPUFanDone == false) {
-            componentTimes.Add(Timer - LastTimeSet);
-            LastTimeSet = Timer;
+            if (f == 2)
+            {
+                componentTimes.Add(Timer - componentTimes[1]);
+                f = 3;
+            }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
                 "Find the processor cooler and place it on top of the processor we placed in the last step, \n" +
                 "it is important to attach the cooler to the motherboard, so it always stays on top of the processor";
         }
         else if (InteractableObjects.GPUDone == false)
         {
-            componentTimes.Add(Timer - LastTimeSet);
-            LastTimeSet = Timer;
+            if (f == 3)
+            {
+                componentTimes.Add(Timer - componentTimes[2]);
+                f = 4;
+            }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
                 "Find the Graphics Card and place it into the right spot on the motherboard, \n" +
                 "Graphics Card ports should be seen on the back of the computer, just under the motherboard ports";
         }
         else if (InteractableObjects.ramDone == false)
         {
-            componentTimes.Add(Timer - LastTimeSet);
-            LastTimeSet = Timer;
+            if (f == 4)
+            {
+                componentTimes.Add(Timer - componentTimes[3]);
+                f = 5;
+            }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
                 "Find the random access memory card and place it into the pc, \n" +
                 "there are 2 different cards that you can use, you can use both of them or one \n";
         }
         else if (InteractableObjects.diskDone == false)
         {
-            componentTimes.Add(Timer - LastTimeSet);
-            LastTimeSet = Timer;
+            if (f == 5)
+            {
+                componentTimes.Add(Timer - componentTimes[4]);
+                f = 6;
+            }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
                 "Find the hard disk drive and place it into its place inside the computer case \n" +
                 "there is a special area for the HDD, be carful to make its ports accessibile \n" +
@@ -297,16 +316,22 @@ public class CanvasMng : MonoBehaviour
         }
         else if (InteractableObjects.cablesDone == false)
         {
-            componentTimes.Add(Timer - LastTimeSet);
-            LastTimeSet = Timer;
+            if (f == 6)
+            {
+                componentTimes.Add(Timer - componentTimes[5]);
+                f = 7;
+            }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
                 "After all the components are inside the computer case, we have to connect them with cables \n" +
                 "so they can function and exchange information correctly, take the big yellow cable  \n" +
                 "and find the place on the motherboard where the cable coming from the power unit should be connected";
         }
         else if (InteractableObjects.numOfFans==0) {
-            componentTimes.Add(Timer - LastTimeSet);
-            LastTimeSet = Timer;
+            if (f == 7)
+            {
+                componentTimes.Add(Timer - componentTimes[6]);
+                f = 8;
+            }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
                 "You were successful in building your PC \n" +
                 "To keep your PC from overheating, you can now add 1 to 3 fans and attach them \n" +

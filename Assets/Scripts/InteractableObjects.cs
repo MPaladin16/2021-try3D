@@ -18,6 +18,7 @@ public class InteractableObjects : MonoBehaviour
     public static int numOfFans;
     public static bool ramDone;
     public Canvas iGCanvas;
+    private int numOfErrors = -8;
 
     public GameObject MB;
     public GameObject PU;
@@ -64,6 +65,7 @@ public class InteractableObjects : MonoBehaviour
     {
         if (collider.gameObject.name.Contains("Controller")) {
 
+            numOfErrors++;
             if (this.gameObject.GetComponent<Rigidbody>() != null) { 
             this.gameObject.GetComponent<Rigidbody>().useGravity = true;
             this.gameObject.GetComponent<Rigidbody>().isKinematic = false; }
@@ -291,6 +293,7 @@ public class InteractableObjects : MonoBehaviour
                 this.gameObject.transform.parent.rotation = new Quaternion(0.0538421832f, 0.703044355f, 0.0369597152f, 0.708140969f);
                 this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 cablesDone=true;
+                Debug.Log("Num of errors:" + numOfErrors);
             }
         }
 

@@ -55,14 +55,14 @@ public class WindowGraph : MonoBehaviour
         List<float> valueListGeneral = new List<float>(8);
 
             
-        valueListGeneral.Add(5f);
-        valueListGeneral.Add(4f);
-        valueListGeneral.Add(3f);
-        valueListGeneral.Add(10f);
+        valueListGeneral.Add(11f);
         valueListGeneral.Add(15f);
-        valueListGeneral.Add(3f);
         valueListGeneral.Add(7f);
+        valueListGeneral.Add(8f);
+        valueListGeneral.Add(5f);
         valueListGeneral.Add(12f);
+        valueListGeneral.Add(10f);
+        valueListGeneral.Add(10.5f);
 
         // 1000,400
         float maxOfBoth = 0;
@@ -134,7 +134,7 @@ public class WindowGraph : MonoBehaviour
 
         float angleX = Mathf.Rad2Deg * Mathf.Atan(Tan);
 
-        rectTransform.rotation = Quaternion.Euler(0, -55, angleX);
+        rectTransform.rotation = Quaternion.Euler(0, -52.312f, angleX);
     }
 
 }
