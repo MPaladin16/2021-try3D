@@ -11,6 +11,15 @@ public class WindowGraph : MonoBehaviour
     [SerializeField] private RectTransform graphContainer;
     [SerializeField] private TextMeshProUGUI MaxValueText;
 
+    private int NumOfErrors;
+
+    [SerializeField] private TextMeshProUGUI UserErrors;
+    [SerializeField] private Image UserErrorsBar;
+
+    [SerializeField] private TextMeshProUGUI GeneralErrors;
+    [SerializeField] private Image GeneralErrorsBar;
+
+
 
     private void Start()
     {
@@ -50,11 +59,12 @@ public class WindowGraph : MonoBehaviour
         return gameObject;
     }
 
-    private void ShowGraph(List<float> valueList) {
+    private void ShowGraph(List<float> valueList)
+    {
 
         List<float> valueListGeneral = new List<float>(8);
 
-            
+
         valueListGeneral.Add(11f);
         valueListGeneral.Add(15f);
         valueListGeneral.Add(7f);
@@ -70,7 +80,8 @@ public class WindowGraph : MonoBehaviour
         {
             maxOfBoth = valueList.Max();
         }
-        else {
+        else
+        {
             maxOfBoth = valueListGeneral.Max();
         }
         float yMax = maxOfBoth * 1.2f;
@@ -80,11 +91,12 @@ public class WindowGraph : MonoBehaviour
         GameObject lastUserGO = null;
         GameObject lastGeneralGO = null;
 
-        for (int i = 0; i < valueList.Count; i++) {
-            float posY =  valueList[i]/ yMax * 400;
+        for (int i = 0; i < valueList.Count; i++)
+        {
+            float posY = valueList[i] / yMax * 400;
             float posX = 150 + 100 * i;
             GameObject CircleUser = CreateCircleUser(new Vector2(posX, posY));
-            if (lastUserGO != null) 
+            if (lastUserGO != null)
             {
                 CreateDotConnection(lastUserGO.GetComponent<RectTransform>().anchoredPosition, CircleUser.GetComponent<RectTransform>().anchoredPosition, 1);
             }
@@ -93,7 +105,7 @@ public class WindowGraph : MonoBehaviour
 
         for (int i = 0; i < valueListGeneral.Count; i++)
         {
-            float posY = valueListGeneral[i]/ yMax * 400;
+            float posY = valueListGeneral[i] / yMax * 400;
             float posX = 150 + 100 * i;
             GameObject CircleGeneral = CreateCircleGeneral(new Vector2(posX, posY));
             if (lastGeneralGO != null)
@@ -102,6 +114,32 @@ public class WindowGraph : MonoBehaviour
             }
             lastGeneralGO = CircleGeneral;
         }
+
+        //Mistakes Graph
+
+        UserErrors.text = "USER ERRORS -" + NumOfErrors.ToString();
+        GeneralErrors.text = "GENERAL ERRORS - 4";
+
+        int GenNumOfErrors = 4;
+        float ErrorDiff = 0;
+        if (NumOfErrors > GenNumOfErrors)
+        {
+            ErrorDiff = (NumOfErrors / GenNumOfErrors);
+            UserErrorsBar.GetComponent<RectTransform>().localPosition =new Vector3(0, -250,0);
+            UserErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 3, 1);
+
+            GeneralErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -400 + 50* (NumOfErrors / GenNumOfErrors), 0);
+            GeneralErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, (GenNumOfErrors / NumOfErrors)*3, 1);
+        }
+        else {
+            ErrorDiff = GenNumOfErrors / NumOfErrors;
+            GeneralErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -250, 0);
+            GeneralErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 3, 1);
+
+            UserErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -400 + 50* (GenNumOfErrors / NumOfErrors), 0);
+            UserErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 3* (NumOfErrors / GenNumOfErrors), 1);
+        }
+
 
 
     }
