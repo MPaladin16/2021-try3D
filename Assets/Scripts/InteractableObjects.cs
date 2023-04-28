@@ -61,6 +61,11 @@ public class InteractableObjects : MonoBehaviour
         
     }
 
+    public int GetnumOfErrors() {
+        return numOfErrors;
+    }
+
+
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.name.Contains("Controller")) {

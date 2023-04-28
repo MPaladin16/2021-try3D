@@ -35,7 +35,7 @@ public class CanvasMng : MonoBehaviour
 
     public bool turnedOn = false;
     void Start()
-    { 
+    {
 
         mainCanvas.gameObject.SetActive(true);
         setCanvas.gameObject.SetActive(false);
@@ -81,6 +81,10 @@ public class CanvasMng : MonoBehaviour
         GuideChange();
     
     }
+    public List<float> GetTimes() {
+        return componentTimes;
+    }
+
 
     void restartGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -251,7 +255,7 @@ public class CanvasMng : MonoBehaviour
         {
             if (f == 0)
             {
-                componentTimes.Add(Timer - LastTimeSet);
+                componentTimes.Add(Timer);
                 f = 1;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
@@ -262,7 +266,7 @@ public class CanvasMng : MonoBehaviour
         {
             if (f == 1)    
             { 
-                componentTimes.Add(Timer - componentTimes[0]);
+                componentTimes.Add(Timer);
                 f = 2;
             }
         timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
@@ -273,7 +277,7 @@ public class CanvasMng : MonoBehaviour
         else if (InteractableObjects.CPUFanDone == false) {
             if (f == 2)
             {
-                componentTimes.Add(Timer - componentTimes[1]);
+                componentTimes.Add(Timer);
                 f = 3;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
@@ -284,7 +288,7 @@ public class CanvasMng : MonoBehaviour
         {
             if (f == 3)
             {
-                componentTimes.Add(Timer - componentTimes[2]);
+                componentTimes.Add(Timer);
                 f = 4;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
@@ -295,7 +299,7 @@ public class CanvasMng : MonoBehaviour
         {
             if (f == 4)
             {
-                componentTimes.Add(Timer - componentTimes[3]);
+                componentTimes.Add(Timer);
                 f = 5;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
@@ -306,7 +310,7 @@ public class CanvasMng : MonoBehaviour
         {
             if (f == 5)
             {
-                componentTimes.Add(Timer - componentTimes[4]);
+                componentTimes.Add(Timer);
                 f = 6;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
@@ -318,7 +322,7 @@ public class CanvasMng : MonoBehaviour
         {
             if (f == 6)
             {
-                componentTimes.Add(Timer - componentTimes[5]);
+                componentTimes.Add(Timer);
                 f = 7;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
@@ -329,7 +333,7 @@ public class CanvasMng : MonoBehaviour
         else if (InteractableObjects.numOfFans==0) {
             if (f == 7)
             {
-                componentTimes.Add(Timer - componentTimes[6]);
+                componentTimes.Add(Timer);
                 f = 8;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +

@@ -20,10 +20,16 @@ public class WindowGraph : MonoBehaviour
     [SerializeField] private Image GeneralErrorsBar;
 
 
+    [SerializeField]  private CanvasMng cnv;
+    [SerializeField] private InteractableObjects io;
+
+
 
     private void Start()
     {
-        List<float> test = new List<float>() { 3,13,8,4,10,5,5,7};
+        Debug.Log("hi");
+        List<float> test = cnv.GetTimes();
+        NumOfErrors = io.GetnumOfErrors();
         ShowGraph(test);
 
     }
@@ -61,7 +67,6 @@ public class WindowGraph : MonoBehaviour
 
     private void ShowGraph(List<float> valueList)
     {
-
         List<float> valueListGeneral = new List<float>(8);
 
 
