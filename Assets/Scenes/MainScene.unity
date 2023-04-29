@@ -9050,6 +9050,7 @@ MonoBehaviour:
   cnv: {fileID: 1912052267}
   io: {fileID: 1912052270}
   infoBtn: {fileID: 468279882}
+  errorCanvas: {fileID: 699536328}
 --- !u!1 &869196240
 GameObject:
   m_ObjectHideFlags: 0

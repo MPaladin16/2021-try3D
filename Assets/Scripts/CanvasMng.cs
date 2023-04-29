@@ -157,12 +157,7 @@ public class CanvasMng : MonoBehaviour
             "FANS: " + InteractableObjects.numOfFans;
 
 
-        foreach (float f in componentTimes)
-        {
-            br++;
-            endGameCanvas.gameObject.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = endGameCanvas.gameObject.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text + "\n Component "+br+ ":  " + f;
-        }
-
+        
         int sakri = GameObject.Find("Objects").gameObject.transform.childCount;
         GameObject objects = GameObject.Find("Objects").gameObject;
         for (int i = 0; i < sakri; i++)
