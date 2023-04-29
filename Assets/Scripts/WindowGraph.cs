@@ -23,14 +23,13 @@ public class WindowGraph : MonoBehaviour
     [SerializeField]  private CanvasMng cnv;
     [SerializeField] private InteractableObjects io;
 
-
+    [SerializeField] private Button infoBtn;
+    [SerializeField] private GameObject errorCanvas;
 
     private void Start()
     {
-        Debug.Log("hi");
-        List<float> test = cnv.GetTimes();
-        NumOfErrors = io.GetnumOfErrors();
-        ShowGraph(test);
+        infoBtn.onClick.AddListener(GetInfo);
+        errorCanvas.SetActive(false);
 
     }
     private GameObject CreateCircleUser(Vector2 pos) {
@@ -46,6 +45,14 @@ public class WindowGraph : MonoBehaviour
         gameObject.gameObject.GetComponent<Image>().color = Color.red;
 
         return gameObject;
+    }
+
+    public void GetInfo() {
+        errorCanvas.SetActive(true);
+        List<float> test = cnv.GetTimes();
+        NumOfErrors = io.GetnumOfErrors();
+        ShowGraph(test);
+        infoBtn.gameObject.SetActive(false);
     }
 
     private GameObject CreateCircleGeneral(Vector2 pos)
@@ -81,7 +88,14 @@ public class WindowGraph : MonoBehaviour
 
         // 1000,400
         float maxOfBoth = 0;
-        if (valueList.Max() > valueListGeneral.Max())
+
+        for (int i = valueList.Count-1; i > 0; i--) {
+            valueList[i] = valueList[i] - valueList[i - 1];
+        }
+
+
+
+            if (valueList.Max() > valueListGeneral.Max())
         {
             maxOfBoth = valueList.Max();
         }
