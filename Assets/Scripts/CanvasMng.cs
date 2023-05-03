@@ -17,7 +17,6 @@ public class CanvasMng : MonoBehaviour
     private Button restartBtn;
     private float startTime;
     private float Timer = 0.0f;
-    private float LastTimeSet = 0.0f;
     private bool startTimer = false;
     private int f = 0;
     public List<float> componentTimes;
