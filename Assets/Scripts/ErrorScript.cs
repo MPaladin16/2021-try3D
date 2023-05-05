@@ -41,9 +41,11 @@ public class ErrorScript : MonoBehaviour
     {
         if (lista.Contains(other.gameObject.name)) {
             numofErrors++;
+            lista.Remove(other.gameObject.name);
             Debug.Log(other.gameObject.name);
         }
     }
+
 
     public int getNumOfErrors() {
         return numofErrors;

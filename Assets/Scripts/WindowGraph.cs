@@ -33,7 +33,7 @@ public class WindowGraph : MonoBehaviour
         errorCanvas.SetActive(false);
 
     }
-    private GameObject CreateCircleUser(Vector2 pos) {
+    private GameObject CreateCircleUser(Vector2 pos, float value) {
         GameObject gameObject = new GameObject("circle", typeof(Image));
         gameObject.transform.SetParent(graphContainer, false);
         gameObject.GetComponent<Image>().sprite = circleSprite;
@@ -42,8 +42,13 @@ public class WindowGraph : MonoBehaviour
         rectTransform.sizeDelta = new Vector2(8, 8);
         rectTransform.anchorMin = new Vector2(0, 0);
         rectTransform.anchorMax = new Vector2(0, 0);
-        gameObject.gameObject.transform.localScale = new Vector3(4, 4, 4);
+        gameObject.gameObject.transform.localScale = new Vector3(4, pos.y/4, 4);
         gameObject.gameObject.GetComponent<Image>().color = Color.red;
+
+        GameObject gameObjectText = new GameObject("circleText", typeof(Text));
+        gameObject.transform.SetParent(gameObject.GetComponent<RectTransform>(), false);
+        gameObjectText.gameObject.GetComponent<Text>().text = value.ToString();
+        gameObjectText.gameObject.transform.localScale = new Vector3(4, 4, 4);
 
         return gameObject;
     }
@@ -56,7 +61,7 @@ public class WindowGraph : MonoBehaviour
         infoBtn.gameObject.SetActive(false);
     }
 
-    private GameObject CreateCircleGeneral(Vector2 pos)
+    private GameObject CreateCircleGeneral(Vector2 pos, float value)
     {
         GameObject gameObject = new GameObject("circle", typeof(Image));
         gameObject.transform.SetParent(graphContainer, false);
@@ -66,9 +71,14 @@ public class WindowGraph : MonoBehaviour
         rectTransform.sizeDelta = new Vector2(8, 8);
         rectTransform.anchorMin = new Vector2(0, 0);
         rectTransform.anchorMax = new Vector2(0, 0);
-        gameObject.gameObject.transform.localScale = new Vector3(4.4f, 4.4f, 5);
+        gameObject.gameObject.transform.localScale = new Vector3(4, pos.y/4, 4);
 
         gameObject.gameObject.GetComponent<Image>().color = Color.blue;
+
+        GameObject gameObjectText = new GameObject("circleText", typeof(Text));
+        gameObject.transform.SetParent(gameObject.GetComponent<RectTransform>(), false);
+        gameObjectText.gameObject.GetComponent<Text>().text = value.ToString();
+        gameObjectText.gameObject.transform.localScale = new Vector3(4, 4, 4);
 
         return gameObject;
     }
@@ -113,25 +123,17 @@ public class WindowGraph : MonoBehaviour
 
         for (int i = 0; i < valueList.Count; i++)
         {
-            float posY = valueList[i] / yMax * 400;
-            float posX = 150 + 100 * i;
-            GameObject CircleUser = CreateCircleUser(new Vector2(posX, posY));
-            if (lastUserGO != null)
-            {
-                CreateDotConnection(lastUserGO.GetComponent<RectTransform>().anchoredPosition, CircleUser.GetComponent<RectTransform>().anchoredPosition, 1);
-            }
+            float posY = valueList[i] / yMax * 200;
+            float posX = 25 + 125 * i;
+            GameObject CircleUser = CreateCircleUser(new Vector2(posX, posY), valueList[i]);
             lastUserGO = CircleUser;
         }
 
         for (int i = 0; i < valueListGeneral.Count; i++)
         {
-            float posY = valueListGeneral[i] / yMax * 400;
-            float posX = 150 + 100 * i;
-            GameObject CircleGeneral = CreateCircleGeneral(new Vector2(posX, posY));
-            if (lastGeneralGO != null)
-            {
-                CreateDotConnection(lastGeneralGO.GetComponent<RectTransform>().anchoredPosition, CircleGeneral.GetComponent<RectTransform>().anchoredPosition, 2);
-            }
+            float posY = valueListGeneral[i] / yMax * 200;
+            float posX = 70 + 125 * i;
+            GameObject CircleGeneral = CreateCircleGeneral(new Vector2(posX, posY), valueListGeneral[i]);
             lastGeneralGO = CircleGeneral;
         }
 

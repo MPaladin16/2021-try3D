@@ -146,14 +146,14 @@ public class CanvasMng : MonoBehaviour
         ingameCanvas.gameObject.SetActive(false);
         endGameCanvas.gameObject.SetActive(true);
         timerCanvas.gameObject.SetActive(false);
-        endGameCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent< TMPro.TextMeshProUGUI > ().text = "Time: " + Timer.ToString("n2");
-        endGameCanvas.gameObject.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "Pc specifications: \n" +
-            "CPU: i7-8400H \n" +
-            "GPU: Asus Rog GTX 770\n" +
-            "SPACE: 1TB HDD\n" +
-            "RAM: " + InteractableObjects.ramsConnected * 8 + "Gb \n" +
-            "POWER: 620W\n" +
-            "FANS: " + InteractableObjects.numOfFans;
+        endGameCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent< TMPro.TextMeshProUGUI > ().text = "Vrijeme: " + Timer.ToString("n2");
+        //endGameCanvas.gameObject.transform.GetChild(2).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "Pc specifications: \n" +
+        //    "CPU: i7-8400H \n" +
+         //   "GPU: Asus Rog GTX 770\n" +
+        //    "SPACE: 1TB HDD\n" +
+         //   "RAM: " + InteractableObjects.ramsConnected * 8 + "Gb \n" +
+         //   "POWER: 620W\n" +
+         //   "FANS: " + InteractableObjects.numOfFans;
 
 
         
@@ -179,57 +179,60 @@ public class CanvasMng : MonoBehaviour
         }
         if (InteractableObjects.motherBoardDone == false) {
             timerCanvas.gameObject.transform.GetChild(3).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text =
-                "A motherboard is the biggest PC component, it is used to connect all other components with each other. \n" +
-                "Ports for all external hardware components should be facing towards you.";
+                "Mati?na plo?a je najve?a komponenta ra?unala, koristi se za me?usobno spajanje svih drugih komponenta \n" +
+                "Utori za sve vanjske hardverske komponente trebali bi biti okrenuti prema vama";
         }
         else if(InteractableObjects.powerDone == false) {
             timerCanvas.gameObject.transform.GetChild(3).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "The power unit is used to bring power from the wall outlet to the motherboard and other components \n" +
-                "It consists of a fan and two different outputs, one for the outside cable leading to the source of power \n" +
-                "and another inside the case that is used to power all the components";
+                "Jedinica za napajanje dovodi napajanje iz uti?nice do mati?ne plo?e i drugih komponenta \n" +
+                "Sastoji se od ventilatora i dva razli?ita izlaza, jedan za vanjski kabel koji vodi do izvora napajanja \n" +
+                "i drugi unutar ku?išta koji se koristi za napajanje svih komponenta";
         }
         else if(InteractableObjects.CPUDone == false) {
             timerCanvas.gameObject.transform.GetChild(3).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "A processor is the smallest part of all the pc components we are using to build a pc. \n" +
-                "It is also the main and most crucial chip in a computer, it is responsible for interpreting \n" +
-                "most of computers commands";
+                "Procesor je najmanji od svih komponenta koje koristimo za sastavljanje ra?unala \n" +
+                "Tako?er je glavni i najvažniji ?ip u ra?unalu, odgovoran je za interpretaciju \n" +
+                "ve?ine ra?unalnih naredbi";
         }
         else if (InteractableObjects.CPUFanDone == false)
         {
             timerCanvas.gameObject.transform.GetChild(3).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "A cooler is usually a big fan that sometimes also consists of a metal conduit on top of it, \n" +
-                "metal conduit is used to disperse the air and helps with keeping the processor from overheating";
+                "Hladnjak je naj?eš?e veliki ventilator koji tako?er ponekad ima metalnu cijev na sebi \n" +
+                "metalna cijev raspršuje zrak i sprje?ava procesor od pregrijavanja";
         }
         else if (InteractableObjects.GPUDone == false)
         {
             timerCanvas.gameObject.transform.GetChild(3).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "Graphics processing unit is usually a part of the motherboard, however, when in need of extra power \n" +
-                "regarding graphics rendering we use dedicated graphics cards, they can process many pieces of data simultaneously \n" +
-                "making them useful with video editing, gaming, machine learning and crypto mining \n" +
-                "It looks like a big cuboid with a fan on it";
+                "Grafi?ka procesorska jedinica obi?no je dio mati?ne plo?e, me?utim, kada je potrebna dodatna snaga \n" +
+                "pri prikazu grafike koristimo namjenske grafi?ke kartice, one mogu obraditi mnogo podataka istovremeno \n" +
+                "što ih ?ini korisnim za ure?ivanje videa, igranje, strojno u?enje i kripto rudarenje \n" +
+                "Izgleda kao veliki kvadar s ventilatorom na sebi";
+
         }
         else if (InteractableObjects.ramDone == false)
         {
             timerCanvas.gameObject.transform.GetChild(3).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "The RAM or Random access memory is a used to handle and solve all active tasks on your computer, \n" +
-                "more RAM means more power when handling tasks on your computer \n" +
-                "personal computers these days usually use from 8Gb to 32Gb of RAM \n" +
-                "RAM should be placed just behind the processors cooler";
+                "RAM ili memorija s nasumi?nim pristupom koristi se za rukovanje i rješavanje svih aktivnih zadataka na vašem ra?unalu \n" +
+                "više RAM-a zna?i više snage pri obavljanju zadataka na vašem ra?unalu \n" +
+                "osobna ra?unala ovih dana obi?no koriste od 8 Gb do 32 Gb RAM-a \n" +
+                "RAM treba postaviti odmah iza hladnjaka procesora";
         }
         else if (InteractableObjects.diskDone == false)
         {
             timerCanvas.gameObject.transform.GetChild(3).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "The HDD or Hard disk drive looks like a small metal box and is used to store data \n" +
-                "besides HDD, we also got SSD or solid state disk that is faster, more used and more famous these days \n" +
-                "Computers are unable to work without a disk as disks are used to boot OS, \n" +
-                "but are also there to store and retrieve digital data";
+
+                "Tvrdi disk izgleda kao malena metalna kutija te se koristi za pohranu podataka \n" +
+                "osim tvrdog diska, postoji i SSD koji je brži te se danas puno ?eš?e koristi \n" +
+                "Kompjuteri ne mogu funkcionirati bez diska jer se oni koriste za podizanje operacijskog, \n" +
+                "sustava, ali su tako?er tu da pohranu digitalnih podataka";
         }
         else if (InteractableObjects.cablesDone == false)
         {
             timerCanvas.gameObject.transform.GetChild(3).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "The cables are used to bring the power from the power unit to the motherboard, \n" +
-                "big Graphics cards like the one we have also need extra power from the power unit. \n" +
-                "All other parts also get their power from the motherboard or from the power unit directly";
+
+                "Kabeli služe kako bi se razmjenjivale informacije ili prenosila struja, \n" +
+                "velika i snažne grafi?ke kartice obi?no trebaju dodatnu struju direktno od napajanja \n" +
+                "Sve ostale komponente ra?unala dobiju struju preko mati?ne plo?e ili direktno od napajanja";
         }
 
     }
@@ -241,9 +244,9 @@ public class CanvasMng : MonoBehaviour
         {
             f = 0;
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text =
-                "Find the Motherboard and place it inside the computer case, facing the right direction \n" +
-                "it is super important to place the screws into the edges of the motherboard \n" +
-                "and connect it to the case (We are not going to screw those components together in this tutorial)";
+                "Prona?i mati?nu plo?u i stavi ju unutar ku?išta, okrenutu u pravom smjeru\n" +
+                "vrlo je bitno zavidati vijke na krajevima mati?ne plo?e i tako u?vrstiti mati?nu plo?u \n" +
+                "(Ovaj dio ne?emo napraviti u sklopu ovih instrukcija)";
         }
         else if (InteractableObjects.powerDone == false)
         {
@@ -253,8 +256,8 @@ public class CanvasMng : MonoBehaviour
                 f = 1;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "Find the Power unit and place it into the correct place inside the computer case \n" +
-                "The power unit, in this case, should be placed at the bottom of the pc with its fan facing out of the box";
+                "Prona?i napajanje i postavi ga na pravilno mjesto unutar ra?unala \n" +
+                "Napajanje ?e u ovom slu?aju biti postavljeno u donji dio ra?unala s ventilatorom okrenutim van ku?išta";
         }
         else if (InteractableObjects.CPUDone == false)
         {
@@ -264,9 +267,9 @@ public class CanvasMng : MonoBehaviour
                 f = 2;
             }
         timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "Find the processor and place it into the right place on the motherboard \n" +
-                "after placing the processor, we use a small amount of thermal paste \n" +
-                "before putting the fan/cooler on it (We are not going to do this part in the tutorial, but it is mandatory)";
+                "Prona?i procesor i stavi ga na pravilno mjesto na mati?noj plo?i \n" +
+                "nakon postavljanja procesora, koristimo malu koli?inu termalne paste \n" +
+                "prije stavljanja ventilatora/hladnjaka na procesor (Pastu ne stavljamo kao dio ovih uputa, ali to je vitalan dio)";
         }
         else if (InteractableObjects.CPUFanDone == false) {
             if (f == 2)
@@ -275,8 +278,8 @@ public class CanvasMng : MonoBehaviour
                 f = 3;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "Find the processor cooler and place it on top of the processor we placed in the last step, \n" +
-                "it is important to attach the cooler to the motherboard, so it always stays on top of the processor";
+                "Prona?i hladnjak za procesor te ga postavi na procesor koji smo koristili u prošlom koraku, \n" +
+                "vrlo je bitno pri?vrstiti hladnjak za mati?nu plo?u kako bi uvijek sigurno stajao iznad procesora";
         }
         else if (InteractableObjects.GPUDone == false)
         {
@@ -286,8 +289,8 @@ public class CanvasMng : MonoBehaviour
                 f = 4;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "Find the Graphics Card and place it into the right spot on the motherboard, \n" +
-                "Graphics Card ports should be seen on the back of the computer, just under the motherboard ports";
+                "Prona?i grafi?ku karticu i stavi ju na pravilo mjesto na mati?noj plo?i, \n" +
+                "Priklju?nici grafi?ke kartice trebali bi biti vidljivi izvan ku?išta, uz priklju?nike mati?ne plo?e";
         }
         else if (InteractableObjects.ramDone == false)
         {
@@ -297,8 +300,7 @@ public class CanvasMng : MonoBehaviour
                 f = 5;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "Find the random access memory card and place it into the pc, \n" +
-                "there are 2 different cards that you can use, you can use both of them or one \n";
+                "Prona?i radnu memoriju te ju postavi unutar ra?unala na za nju predvi?eno mjesto, \n";
         }
         else if (InteractableObjects.diskDone == false)
         {
@@ -308,9 +310,8 @@ public class CanvasMng : MonoBehaviour
                 f = 6;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "Find the hard disk drive and place it into its place inside the computer case \n" +
-                "there is a special area for the HDD, be carful to make its ports accessibile \n" +
-                "when placing the HDD into its designated area";
+                "Prona?i tvrdi disk te ga postavi unutar ku?išta \n" +
+                "Napravljeno je posebno mjesto za tvrdi disk, pripazi da su portovi dostupni za kasnije spajanje";
         }
         else if (InteractableObjects.cablesDone == false)
         {
@@ -320,9 +321,9 @@ public class CanvasMng : MonoBehaviour
                 f = 7;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "After all the components are inside the computer case, we have to connect them with cables \n" +
-                "so they can function and exchange information correctly, take the big yellow cable  \n" +
-                "and find the place on the motherboard where the cable coming from the power unit should be connected";
+                "Nakon što su sve komponente unutar ra?unala, potrebno je povezati komponente kabelima\n" +
+                "kako bi mogle funkcionirati. Prona?i žuti kabel i mjesto na mati?noj plo?i gdje ga je \n" +
+                "potrebno spojiti s napajanjem";
         }
         else if (InteractableObjects.numOfFans==0) {
             if (f == 7)
@@ -331,13 +332,13 @@ public class CanvasMng : MonoBehaviour
                 f = 8;
             }
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "You were successful in building your PC \n" +
-                "To keep your PC from overheating, you can now add 1 to 3 fans and attach them \n" +
-                "to the inside roof of the PC case, this is not mandatory but is recommended";
+                "Uspješno si sklopio vlastito ra?unalo \n" +
+                "Kako se tvoje ra?unalo ne bi pregrijalo, možeš dodati jedan do tri ventilatora. \n" +
+                "Ovo nije obavezan korak, ali je preporu?en kod sklapanja ra?unala.";
         }
         else{
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text = "" +
-                "\n \n Try turning your PC on!";
+                "\n \n Pokušaj upaliti ra?unalo";
         }
     }
 
