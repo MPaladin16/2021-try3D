@@ -34,7 +34,7 @@ public class WindowGraph : MonoBehaviour
         errorCanvas.SetActive(false);
 
     }
-    private GameObject CreateCircleUser(Vector2 pos, float value) {
+    private GameObject CreateCircleUser(Vector2 pos) {
         GameObject gameObject = new GameObject("circle", typeof(Image));
         gameObject.transform.SetParent(graphContainer, false);
         gameObject.GetComponent<Image>().sprite = circleSprite;
@@ -46,10 +46,6 @@ public class WindowGraph : MonoBehaviour
         gameObject.gameObject.transform.localScale = new Vector3(4, pos.y/4, 4);
         gameObject.gameObject.GetComponent<Image>().color = Color.red;
 
-        GameObject gameObjectText = new GameObject("circleText", typeof(Text));
-        gameObject.transform.SetParent(gameObject.GetComponent<RectTransform>(), false);
-        gameObjectText.gameObject.GetComponent<Text>().text = value.ToString();
-        gameObjectText.gameObject.transform.localScale = new Vector3(4, 4, 4);
 
         return gameObject;
     }
@@ -62,7 +58,7 @@ public class WindowGraph : MonoBehaviour
         infoBtn.gameObject.SetActive(false);
     }
 
-    private GameObject CreateCircleGeneral(Vector2 pos, float value)
+    private GameObject CreateCircleGeneral(Vector2 pos)
     {
         GameObject gameObject = new GameObject("circle", typeof(Image));
         gameObject.transform.SetParent(graphContainer, false);
@@ -76,10 +72,6 @@ public class WindowGraph : MonoBehaviour
 
         gameObject.gameObject.GetComponent<Image>().color = Color.blue;
 
-        GameObject gameObjectText = new GameObject("circleText", typeof(Text));
-        gameObject.transform.SetParent(gameObject.GetComponent<RectTransform>(), false);
-        gameObjectText.gameObject.GetComponent<Text>().text = value.ToString();
-        gameObjectText.gameObject.transform.localScale = new Vector3(4, 4, 4);
 
         return gameObject;
     }
@@ -136,7 +128,7 @@ public class WindowGraph : MonoBehaviour
         {
             float posY = valueList[i] / yMax * 200;
             float posX = 25 + 125 * i;
-            GameObject CircleUser = CreateCircleUser(new Vector2(posX, posY), valueList[i]);
+            GameObject CircleUser = CreateCircleUser(new Vector2(posX, posY));
             lastUserGO = CircleUser;
         }
 
@@ -144,14 +136,14 @@ public class WindowGraph : MonoBehaviour
         {
             float posY = valueListGeneral[i] / yMax * 200;
             float posX = 70 + 125 * i;
-            GameObject CircleGeneral = CreateCircleGeneral(new Vector2(posX, posY), valueListGeneral[i]);
+            GameObject CircleGeneral = CreateCircleGeneral(new Vector2(posX, posY));
             lastGeneralGO = CircleGeneral;
         }
 
         //Mistakes Graph
 
-        UserErrors.text = "Broj grešaka korisnika -" + NumOfErrors.ToString();
-        GeneralErrors.text = "Prosje?an broj grešaka - 2";
+        UserErrors.text = UserErrors.text + " - " + NumOfErrors.ToString();
+        GeneralErrors.text = GeneralErrors.text + " - 2";
 
         int GenNumOfErrors = 4;
         float ErrorDiff = 0;
