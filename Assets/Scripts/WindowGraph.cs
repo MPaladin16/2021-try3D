@@ -27,6 +27,7 @@ public class WindowGraph : MonoBehaviour
     [SerializeField] private GameObject errorCanvas;
     [SerializeField] private ErrorScript es;
 
+    [SerializeField] private TextMeshProUGUI times;
     private void Start()
     {
         infoBtn.onClick.AddListener(GetInfo);
@@ -100,13 +101,23 @@ public class WindowGraph : MonoBehaviour
         // 1000,400
         float maxOfBoth = 0;
 
+
+        
+
         for (int i = valueList.Count-1; i > 0; i--) {
             valueList[i] = valueList[i] - valueList[i - 1];
         }
 
+        times.text = valueList[0].ToString("n2") + " - " + valueListGeneral[0].ToString("n2") + " ----- " +
+            valueList[1].ToString("n2") + " - " + valueListGeneral[1].ToString("n2") + " -- " +
+            valueList[2].ToString("n2") + " - " + valueListGeneral[2].ToString("n2") + " --- " +
+            valueList[3].ToString("n2") + " - " + valueListGeneral[3].ToString("n2") + " --- " +
+            valueList[4].ToString("n2") + " - " + valueListGeneral[4].ToString("n2") + " ---- " +
+            valueList[5].ToString("n2") + " - " + valueListGeneral[5].ToString("n2") + " -- " +
+            valueList[6].ToString("n2") + " - " + valueListGeneral[6].ToString("n2") + " --- " +
+            valueList[7].ToString("n2") + " - " + valueListGeneral[7].ToString("n2");
 
-
-            if (valueList.Max() > valueListGeneral.Max())
+        if (valueList.Max() > valueListGeneral.Max())
         {
             maxOfBoth = valueList.Max();
         }
@@ -139,8 +150,8 @@ public class WindowGraph : MonoBehaviour
 
         //Mistakes Graph
 
-        UserErrors.text = "USER ERRORS -" + NumOfErrors.ToString();
-        GeneralErrors.text = "GENERAL ERRORS - 4";
+        UserErrors.text = "Broj grešaka korisnika -" + NumOfErrors.ToString();
+        GeneralErrors.text = "Prosje?an broj grešaka - 2";
 
         int GenNumOfErrors = 4;
         float ErrorDiff = 0;

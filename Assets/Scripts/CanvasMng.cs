@@ -54,7 +54,7 @@ public class CanvasMng : MonoBehaviour
 
         gearBtn = ingameCanvas.gameObject.transform.GetChild(0).gameObject.GetComponent<Button>();
 
-        endGameCanvas.gameObject.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(goToClassroom);// go to new scene where the test is in the classroom
+        
 
         startTime = Time.time;
 
@@ -244,7 +244,7 @@ public class CanvasMng : MonoBehaviour
         {
             f = 0;
             timerCanvas.gameObject.transform.GetChild(1).gameObject.GetComponent<TMPro.TextMeshProUGUI>().text =
-                "Prona?i mati?nu plo?u i stavi ju unutar ku?išta, okrenutu u pravom smjeru\n" +
+                "Prona?ite mati?nu plo?u i stavite ju unutar ku?išta, okrenutu u pravom smjeru\n" +
                 "vrlo je bitno zavidati vijke na krajevima mati?ne plo?e i tako u?vrstiti mati?nu plo?u \n" +
                 "(Ovaj dio ne?emo napraviti u sklopu ovih instrukcija)";
         }
