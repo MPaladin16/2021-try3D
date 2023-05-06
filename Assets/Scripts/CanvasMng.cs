@@ -70,14 +70,14 @@ public class CanvasMng : MonoBehaviour
 
 
         timerCanvas.gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        timerCanvas.gameObject.transform.GetChild(2).gameObject.transform.GetChild(1).gameObject.SetActive(false);
-        timerCanvas.gameObject.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        timerCanvas.gameObject.transform.GetChild(4).gameObject.transform.GetChild(1).gameObject.SetActive(false);
-        timerCanvas.gameObject.transform.GetChild(5).gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        timerCanvas.gameObject.transform.GetChild(6).gameObject.transform.GetChild(1).gameObject.SetActive(false);
-        timerCanvas.gameObject.transform.GetChild(7).gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        timerCanvas.gameObject.transform.GetChild(8).gameObject.transform.GetChild(1).gameObject.SetActive(false);
-        timerCanvas.gameObject.transform.GetChild(9).gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        timerCanvas.gameObject.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        timerCanvas.gameObject.transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.SetActive(false);
+        timerCanvas.gameObject.transform.GetChild(1).gameObject.transform.GetChild(3).gameObject.SetActive(false);
+        timerCanvas.gameObject.transform.GetChild(1).gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        timerCanvas.gameObject.transform.GetChild(1).gameObject.transform.GetChild(5).gameObject.SetActive(false);
+        timerCanvas.gameObject.transform.GetChild(1).gameObject.transform.GetChild(6).gameObject.SetActive(false);
+        timerCanvas.gameObject.transform.GetChild(1).gameObject.transform.GetChild(7).gameObject.SetActive(false);
+        timerCanvas.gameObject.transform.GetChild(1).gameObject.transform.GetChild(8).gameObject.SetActive(false);
 
     }
 
@@ -153,7 +153,6 @@ public class CanvasMng : MonoBehaviour
   
     void gameOver() {
 
-        int br = 0;
         mainCanvas.gameObject.SetActive(false);
         ingameCanvas.gameObject.SetActive(false);
         endGameCanvas.gameObject.SetActive(true);

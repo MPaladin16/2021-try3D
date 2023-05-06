@@ -27,7 +27,7 @@ public class WindowGraph : MonoBehaviour
     [SerializeField] private GameObject errorCanvas;
     [SerializeField] private ErrorScript es;
 
-    [SerializeField] private TextMeshProUGUI times;
+    [SerializeField] private List<TextMeshProUGUI> times;
     private void Start()
     {
         infoBtn.onClick.AddListener(GetInfo);
@@ -100,14 +100,14 @@ public class WindowGraph : MonoBehaviour
             valueList[i] = valueList[i] - valueList[i - 1];
         }
 
-        times.text = valueList[0].ToString("n2") + " - " + valueListGeneral[0].ToString("n2") + " ----- " +
-            valueList[1].ToString("n2") + " - " + valueListGeneral[1].ToString("n2") + " -- " +
-            valueList[2].ToString("n2") + " - " + valueListGeneral[2].ToString("n2") + " --- " +
-            valueList[3].ToString("n2") + " - " + valueListGeneral[3].ToString("n2") + " --- " +
-            valueList[4].ToString("n2") + " - " + valueListGeneral[4].ToString("n2") + " ---- " +
-            valueList[5].ToString("n2") + " - " + valueListGeneral[5].ToString("n2") + " -- " +
-            valueList[6].ToString("n2") + " - " + valueListGeneral[6].ToString("n2") + " --- " +
-            valueList[7].ToString("n2") + " - " + valueListGeneral[7].ToString("n2");
+        times[0].text = valueList[0].ToString("n2") + "s - " + valueListGeneral[0].ToString("n2") + "s";
+        times[1].text = valueList[1].ToString("n2") + "s - " + valueListGeneral[1].ToString("n2") + "s";
+        times[2].text = valueList[2].ToString("n2") + "s - " + valueListGeneral[2].ToString("n2") + "s";
+        times[3].text = valueList[3].ToString("n2") + "s - " + valueListGeneral[3].ToString("n2") + "s";
+        times[4].text = valueList[4].ToString("n2") + "s - " + valueListGeneral[4].ToString("n2") + "s";
+        times[5].text = valueList[5].ToString("n2") + "s - " + valueListGeneral[5].ToString("n2") + "s";
+        times[6].text = valueList[6].ToString("n2") + "s - " + valueListGeneral[6].ToString("n2") + "s";
+        times[7].text = valueList[7].ToString("n2") + "s - " + valueListGeneral[7].ToString("n2") + "s";
 
         if (valueList.Max() > valueListGeneral.Max())
         {
