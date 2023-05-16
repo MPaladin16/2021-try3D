@@ -6,6 +6,7 @@ public class Trash : MonoBehaviour
 {
     // Start is called before the first frame update
     private BoxCollider TrashReset;
+    private int numofErrors = -8;
     void Start()
     {
         TrashReset = GetComponent<BoxCollider>();
@@ -16,6 +17,19 @@ public class Trash : MonoBehaviour
     {
         
     }
+
+    public int getNumOfErrors()
+    {
+        return numofErrors;
+    }
+
+    public void numOfErrorPlus()
+    {
+        Debug.Log("Error+1");
+        numofErrors++;
+    }
+
+
 
     private void OnTriggerEnter(Collider other)
     {

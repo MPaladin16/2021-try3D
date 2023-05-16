@@ -25,7 +25,6 @@ public class WindowGraph : MonoBehaviour
 
     [SerializeField] private Button infoBtn;
     [SerializeField] private GameObject errorCanvas;
-    [SerializeField] private ErrorScript es;
 
     [SerializeField] private List<TextMeshProUGUI> times;
     private void Start()
@@ -53,7 +52,7 @@ public class WindowGraph : MonoBehaviour
     public void GetInfo() {
         errorCanvas.SetActive(true);
         List<float> test = cnv.GetTimes();
-        NumOfErrors =  es.getNumOfErrors();
+        NumOfErrors =  io.getNumOfErrors();
         ShowGraph(test);
         infoBtn.gameObject.SetActive(false);
     }
@@ -149,16 +148,12 @@ public class WindowGraph : MonoBehaviour
         float ErrorDiff = 0;
         if (NumOfErrors > GenNumOfErrors)
         {
-            if (NumOfErrors == 0)
-            {
-                NumOfErrors = 1;
-            }
             ErrorDiff = (NumOfErrors / GenNumOfErrors);
             UserErrorsBar.GetComponent<RectTransform>().localPosition =new Vector3(0, -250,0);
-            UserErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 3, 1);
+            UserErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 1f, 1);
 
-            GeneralErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -400 + 50* (NumOfErrors / GenNumOfErrors), 0);
-            GeneralErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, (GenNumOfErrors / NumOfErrors)*3, 1);
+            GeneralErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -250 - ((300 - (GenNumOfErrors / NumOfErrors) * 300)/2), 0);
+            GeneralErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, (GenNumOfErrors / NumOfErrors), 1);
         }
         else {
             if (NumOfErrors == 0) {
@@ -166,10 +161,10 @@ public class WindowGraph : MonoBehaviour
             }
             ErrorDiff = GenNumOfErrors / NumOfErrors;
             GeneralErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -250, 0);
-            GeneralErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 3, 1);
+            GeneralErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 1f, 1);
 
-            UserErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -400 + 50* (GenNumOfErrors / NumOfErrors), 0);
-            UserErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 3* (NumOfErrors / GenNumOfErrors), 1);
+            UserErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -250 - ((300 - (NumOfErrors / GenNumOfErrors) * 300) / 2), 0);
+            UserErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, (NumOfErrors / GenNumOfErrors), 1);
         }
 
 

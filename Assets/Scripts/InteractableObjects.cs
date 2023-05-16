@@ -19,11 +19,14 @@ public class InteractableObjects : MonoBehaviour
     public static bool ramDone;
     public Canvas iGCanvas;
 
+    public Trash tr;
+
     public GameObject MB;
     public GameObject PU;
     public GameObject CPU;
     public GameObject GPU;
     public GameObject CPUCOOL;
+
     static bool onlyOnceRAM, onlyOnceRAM2, onlyOnceFAN1, onlyOnceFAN2, onlyOnceFAN3;
     // Start is called before the first frame update
     void Start()
@@ -51,6 +54,8 @@ public class InteractableObjects : MonoBehaviour
         CPU = GameObject.Find("jarst_processor_11 (1)");
         GPU = GameObject.Find("jarst_graphics_card_1 (1)");
         CPUCOOL = GameObject.Find("jarst_cooling_unit (1)");
+
+        tr = GameObject.Find("Trash").GetComponent<Trash>();
        // MB.SetActive(false);
     }
 
@@ -60,18 +65,20 @@ public class InteractableObjects : MonoBehaviour
         
     }
 
-
+    public int getNumOfErrors() {
+       return  tr.getNumOfErrors();
+    }
 
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.name.Contains("Controller")) {
-
             if (this.gameObject.GetComponent<Rigidbody>() != null) { 
             this.gameObject.GetComponent<Rigidbody>().useGravity = true;
-            this.gameObject.GetComponent<Rigidbody>().isKinematic = false; }
+            this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            }
         }
 
-        if (this.gameObject.transform.name.Contains("placeCollider")) { 
+        if (this.gameObject.transform.name.Contains("placeCollider")) {
         if (this.gameObject.transform.parent.name.Contains("motherboard") && collider.gameObject.name.Contains("motherboard_col")) {
 
                 //this.gameObject.transform.parent.gameObject.SetActive(false);
@@ -90,7 +97,6 @@ public class InteractableObjects : MonoBehaviour
 
         if (this.gameObject.transform.name.Contains("placeColliderPOWER"))
         {
-
             if (this.gameObject.transform.parent.name.Contains("power_supply") && motherBoardDone == true
                 && collider.gameObject.name.Contains("power_col") && this.gameObject.transform.parent.localRotation.y < 0.85f
                 && this.gameObject.transform.parent.localRotation.y > 0.6f)
@@ -189,29 +195,7 @@ public class InteractableObjects : MonoBehaviour
             }
         }
 
-        if (this.gameObject.transform.name.Contains("placeCollider2RAM"))
-        {
-            if (this.gameObject.transform.parent.name.Contains("RAM") && GPUDone == true
-                && collider.gameObject.name.Contains("RAM2_col") //&& this.gameObject.transform.parent.localRotation.y > 0.65f
-                //&& this.gameObject.transform.parent.localRotation.y < 0.95f
-                )
-            {
-
-                MotherBoard = GameObject.Find("jarst_motherboard_2 (1)");
-                //this.gameObject.transform.parent.parent = MotherBoard.transform;
-                this.gameObject.transform.parent.position = new Vector3(-0.204467237f, 0.6045403516f, 0.797131468f);
-                this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f); ;
-                this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
-                ramDone = true;
-                if (onlyOnceRAM2 == false)
-                {
-                    onlyOnceRAM2 = true;
-                    ramsConnected++;
-                }
-                iGCanvas.gameObject.transform.GetChild(10).gameObject.GetComponent<Image>().color = Color.green;
-                //this.gameObject.transform.parent.
-            }
-        }
+        
 
         //HDD connect
         if (this.gameObject.transform.name.Contains("hddCollider"))
@@ -230,58 +214,7 @@ public class InteractableObjects : MonoBehaviour
         }
 
 
-        if (this.gameObject.transform.name.Contains("placeCollider1FAN"))
-        {
-            if (this.gameObject.transform.parent.name.Contains("jarst_cooler (1)") && diskDone == true
-                && collider.gameObject.name.Contains("cooler_col") 
-                )
-            {
-                this.gameObject.transform.parent.parent = PC.transform;
-                this.gameObject.transform.parent.position = new Vector3(-0.342999995f, 0.769999981f, 0.953999996f);
-                this.gameObject.transform.parent.rotation = new Quaternion(0, 0, 0.707106829f, 0.707106829f);
-                this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
-                if (onlyOnceFAN1 == false)
-                {
-                    onlyOnceFAN1 = true;
-                    numOfFans++;
-                }
-            }
-        }
-        if (this.gameObject.transform.name.Contains("placeCollider2FAN"))
-        {
-            if (this.gameObject.transform.parent.name.Contains("jarst_cooler (2)") && diskDone == true
-                && collider.gameObject.name.Contains("cooler_col")
-                )
-            {
-                this.gameObject.transform.parent.parent = PC.transform;
-                this.gameObject.transform.parent.position = new Vector3(-0.342999995f, 0.769999981f, 0.72299999f);
-                this.gameObject.transform.parent.rotation = new Quaternion(0, 0, 0.707106829f, 0.707106829f);
-                this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
-                if (onlyOnceFAN2 == false)
-                {
-                    onlyOnceFAN2 = true;
-                    numOfFans++;
-                }
-            }
-        }
-        if (this.gameObject.transform.name.Contains("placeCollider3FAN"))
-        {
-            if (this.gameObject.transform.parent.name.Contains("jarst_cooler (3)") && diskDone == true
-                && collider.gameObject.name.Contains("cooler_col")
-                )
-            {
-                this.gameObject.transform.parent.parent = PC.transform;
-                this.gameObject.transform.parent.position = new Vector3(-0.342999995f, 0.769999981f, 0.490999997f);
-                this.gameObject.transform.parent.rotation = new Quaternion(0, 0, 0.707106829f, 0.707106829f);
-                this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
-
-                if (onlyOnceFAN3 == false)
-                {
-                    onlyOnceFAN3 = true;
-                    numOfFans++;
-                }
-            }
-        }
+        
 
         if (this.gameObject.transform.name.Contains("mainCableCollider"))
         {
