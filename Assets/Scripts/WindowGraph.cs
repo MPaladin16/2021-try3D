@@ -146,25 +146,30 @@ public class WindowGraph : MonoBehaviour
 
         int GenNumOfErrors = 2;
         float ErrorDiff = 0;
+        float ErrorDiff2 = 1;
         if (NumOfErrors > GenNumOfErrors)
         {
             ErrorDiff = (NumOfErrors / GenNumOfErrors);
+            ErrorDiff2 = GenNumOfErrors / NumOfErrors;
+                Debug.Log(ErrorDiff2+" errDif");
             UserErrorsBar.GetComponent<RectTransform>().localPosition =new Vector3(0, -250,0);
             UserErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 1f, 1);
 
-            GeneralErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -250 - ((300 - (GenNumOfErrors / NumOfErrors) * 300)/2), 0);
-            GeneralErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, (GenNumOfErrors / NumOfErrors), 1);
+            GeneralErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -250 - ((300 - ErrorDiff2 * 300)/2), 0);
+            GeneralErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, ErrorDiff2, 1);
         }
         else {
             if (NumOfErrors == 0) {
                 NumOfErrors = 1;
             }
             ErrorDiff = GenNumOfErrors / NumOfErrors;
+            ErrorDiff2 = (NumOfErrors / GenNumOfErrors);
+            Debug.Log(ErrorDiff2 + " errDif");
             GeneralErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -250, 0);
             GeneralErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 1f, 1);
 
-            UserErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -250 - ((300 - (NumOfErrors / GenNumOfErrors) * 300) / 2), 0);
-            UserErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, (NumOfErrors / GenNumOfErrors), 1);
+            UserErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -250 - ((300 - ErrorDiff2 * 300) / 2), 0);
+            UserErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, ErrorDiff2, 1);
         }
 
 
