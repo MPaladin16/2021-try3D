@@ -11,7 +11,7 @@ public class WindowGraph : MonoBehaviour
     [SerializeField] private RectTransform graphContainer;
     [SerializeField] private TextMeshProUGUI MaxValueText;
 
-    private int NumOfErrors;
+    private float NumOfErrors;
 
     [SerializeField] private TextMeshProUGUI UserErrors;
     [SerializeField] private Image UserErrorsBar;
@@ -52,7 +52,7 @@ public class WindowGraph : MonoBehaviour
     public void GetInfo() {
         errorCanvas.SetActive(true);
         List<float> test = cnv.GetTimes();
-        NumOfErrors =  io.getNumOfErrors();
+        NumOfErrors =  (float)io.getNumOfErrors();
         ShowGraph(test);
         infoBtn.gameObject.SetActive(false);
     }
@@ -159,8 +159,8 @@ public class WindowGraph : MonoBehaviour
             GeneralErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, ErrorDiff2, 1);
         }
         else {
-            if (NumOfErrors == 0) {
-                NumOfErrors = 1;
+            if (NumOfErrors < 0.2f) {
+                NumOfErrors = 0.1f;
             }
             ErrorDiff = GenNumOfErrors / NumOfErrors;
             ErrorDiff2 = ((float)NumOfErrors / (float)GenNumOfErrors);

@@ -7,9 +7,11 @@ public class Trash : MonoBehaviour
     // Start is called before the first frame update
     private BoxCollider TrashReset;
     private int numofErrors = -8;
+    private int flag;
     void Start()
     {
         TrashReset = GetComponent<BoxCollider>();
+        releaseFlag();
     }
 
     // Update is called once per frame
@@ -25,8 +27,18 @@ public class Trash : MonoBehaviour
 
     public void numOfErrorPlus()
     {
-        Debug.Log("Error+1");
-        numofErrors++;
+        if (flag == 0)
+        {
+            Debug.Log("Error+1");
+            numofErrors++;
+            flag = 1;
+        }
+        else { }
+    }
+
+    public void releaseFlag()
+    {
+        flag= 0;
     }
 
 
