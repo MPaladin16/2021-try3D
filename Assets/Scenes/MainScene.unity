@@ -403,6 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 2071376047}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -557,6 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -1099,6 +1101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -1760,6 +1763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -3496,6 +3500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -3587,6 +3592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -3863,6 +3869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -4142,6 +4149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -4592,6 +4600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -5695,6 +5704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -5934,6 +5944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -6358,6 +6369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -6384,6 +6396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 2071376047}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -6551,6 +6564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -6896,6 +6910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -7940,6 +7955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -8386,6 +8402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -9933,6 +9950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -11208,6 +11226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 2071376047}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -11310,6 +11329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -11578,6 +11598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -13177,6 +13198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -13493,6 +13515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -13903,6 +13926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -14214,6 +14238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -14372,6 +14397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -14657,6 +14683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 2071376047}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -14882,6 +14909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -15462,6 +15490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -15865,6 +15894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -16002,6 +16032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 1276104603}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -16540,6 +16571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -16612,6 +16644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 1276104603}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -17652,6 +17685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -18738,6 +18772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -19376,6 +19411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -19666,6 +19702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 1276104603}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -19765,6 +19802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 2071376047}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -20026,6 +20064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -20292,6 +20331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -20616,6 +20656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -20716,6 +20757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -21239,6 +21281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -21714,6 +21757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -22075,6 +22119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -22508,6 +22553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -22669,6 +22715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -23552,6 +23599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 2071376047}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -23637,6 +23685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -23842,6 +23891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -24155,6 +24205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -24928,6 +24979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -25166,6 +25218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -26132,6 +26185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 1276104603}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -26492,6 +26546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -26603,6 +26658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -27085,7 +27141,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2022239647}
+        m_TargetAssemblyTypeName: Trash, Assembly-CSharp
+        m_MethodName: releaseFlag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -27292,6 +27360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 1276104603}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -27562,6 +27631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 1276104603}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -27653,6 +27723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 1276104603}
@@ -27943,7 +28014,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2022239647}
+        m_TargetAssemblyTypeName: Trash, Assembly-CSharp
+        m_MethodName: releaseFlag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -28494,6 +28577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 1276104603}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -28683,6 +28767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -28963,6 +29048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -29017,6 +29103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -29269,6 +29356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -29557,6 +29645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -29788,6 +29877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -29960,6 +30050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -30014,6 +30105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 0}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 540652248}
   tr: {fileID: 0}
   MB: {fileID: 0}
@@ -30136,6 +30228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 2113918416}
   MotherBoard: {fileID: 2071376047}
+  tips: {fileID: 0}
   iGCanvas: {fileID: 0}
   tr: {fileID: 0}
   MB: {fileID: 0}

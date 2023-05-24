@@ -17,6 +17,8 @@ public class InteractableObjects : MonoBehaviour
     public static int ramsConnected;
     public static int numOfFans;
     public static bool ramDone;
+
+    public GameObject tips;
     public Canvas iGCanvas;
 
     public Trash tr;
@@ -65,6 +67,12 @@ public class InteractableObjects : MonoBehaviour
         
     }
 
+    public void resetTips() {
+        for (int i = 0; i < 8; i++) {
+            tips.gameObject.transform.GetChild(i).gameObject.SetActive(false);
+                }
+    }
+
     public int getNumOfErrors() {
        return  tr.getNumOfErrors();
     }
@@ -92,6 +100,7 @@ public class InteractableObjects : MonoBehaviour
                 this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
 
                 motherBoardDone = true;
+                resetTips();
                 iGCanvas.gameObject.transform.GetChild(7).gameObject.GetComponent<Image>().color = Color.green;
         } }
 
@@ -111,6 +120,7 @@ public class InteractableObjects : MonoBehaviour
                 //this.gameObject.transform.parent.rotation = new Quaternion(0.707106829f, 0.707106829f, 0, 0);
                 //this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 powerDone = true;
+                resetTips();
                 iGCanvas.gameObject.transform.GetChild(11).gameObject.GetComponent<Image>().color = Color.green;
             }
         }
@@ -131,6 +141,7 @@ public class InteractableObjects : MonoBehaviour
                 //this.gameObject.transform.parent.rotation = new Quaternion(0, 0, 0, 0.707106829f);
                 //this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 CPUDone = true;
+                resetTips();
                 iGCanvas.gameObject.transform.GetChild(9).gameObject.GetComponent<Image>().color = Color.green;
             }
         }
@@ -149,6 +160,7 @@ public class InteractableObjects : MonoBehaviour
                 //this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
                 //this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 CPUFanDone = true;
+                resetTips();
                 iGCanvas.gameObject.transform.GetChild(9).gameObject.GetComponent<Image>().color = Color.green;
             }
         }
@@ -168,6 +180,7 @@ public class InteractableObjects : MonoBehaviour
                 //this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
                 //this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 GPUDone = true;
+                resetTips();
                 iGCanvas.gameObject.transform.GetChild(8).gameObject.GetComponent<Image>().color = Color.green;
                 //this.gameObject.transform.parent.
             }
@@ -185,6 +198,7 @@ public class InteractableObjects : MonoBehaviour
                 this.gameObject.transform.parent.rotation = new Quaternion(0, 0.707106829f, 0, 0.707106829f);
                 this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 ramDone = true;
+                resetTips();
                 if (onlyOnceRAM == false)
                 {
                     onlyOnceRAM = true;
@@ -209,6 +223,7 @@ public class InteractableObjects : MonoBehaviour
                 this.gameObject.transform.parent.position = new Vector3(0.2330000011f, 0.76000011f, 0.95000002f);
                 this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                     diskDone = true;
+                resetTips();
                 iGCanvas.gameObject.transform.GetChild(12).gameObject.GetComponent<Image>().color = Color.green;
             }
         }
@@ -226,6 +241,7 @@ public class InteractableObjects : MonoBehaviour
                 this.gameObject.transform.parent.rotation = new Quaternion(0.0538421832f, 0.703044355f, 0.0369597152f, 0.708140969f);
                 this.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                 cablesDone=true;
+                resetTips();
             }
         }
 
