@@ -2624,7 +2624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535532929855, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 70
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535532929855, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2637,6 +2637,10 @@ PrefabInstance:
     - target: {fileID: 3748272535598418369, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "metoda prikupljanja psihofiziolo\u0161kih mjera."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748272535614400801, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535676178224, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: Correct
@@ -2652,7 +2656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535743678344, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 70
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535743678344, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2753,7 +2757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536243341820, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536243341820, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2783,6 +2787,10 @@ PrefabInstance:
     - target: {fileID: 3748272536287968406, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "igra\u010Dima je u prosjeku najdulje trebalo da slo\u017Ee prvu komponentu."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748272536287968406, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536337685528, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_IsActive
@@ -2826,7 +2834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536603123139, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536620051929, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
@@ -2853,6 +2861,14 @@ PrefabInstance:
       propertyPath: m_Text
       value: "prosje\u010Dan broj gubitaka \u017Eivota na nivou 3 je 3.6."
       objectReference: {fileID: 0}
+    - target: {fileID: 3748272536666746462, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748272536666746462, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3748272536673170441, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_SizeDelta.y
       value: 70
@@ -2868,6 +2884,14 @@ PrefabInstance:
     - target: {fileID: 3748272536731082783, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "80% igra\u010Da izjavilo je da im je igra prete\u0161ka."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748272536731082783, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748272536731082783, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536746404778, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
@@ -2909,6 +2933,10 @@ PrefabInstance:
       value: "trajanje slaganja komponente 4 je u prosjeku zna\u010Dajno du\u017Ee
         nego slaganje ostalih komponenti"
       objectReference: {fileID: 0}
+    - target: {fileID: 3748272536826366458, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3748272536829645595, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: Correct
       value: 1
@@ -2933,6 +2961,10 @@ PrefabInstance:
     - target: {fileID: 3748272536861296814, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "Korisnik je sve komponente slo\u017Eio puno br\u017Ee od prosjeka"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748272536861296814, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536870364772, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: Correct
@@ -3042,10 +3074,18 @@ PrefabInstance:
       propertyPath: Correct
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3748272537141777850, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 3748272537228672306, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "Korisniku je trebalo neo\u010Dekivano dugo da slo\u017Ei tre\u0107u
         komponentu"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748272537228672306, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3748272537254569211, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_SizeDelta.y
