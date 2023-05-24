@@ -434,7 +434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88248778}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.49, y: 0.248, z: -15.21}
+  m_LocalPosition: {x: -2.49, y: 0.07, z: -15.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2705,7 +2705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535876970124, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "automatizirano prikupljanje podataka o pona\u0161anju igra\u010Da"
+      value: "automatizirano prikupljanje podataka o pona\u0161anju igra\u010Da."
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536025264731, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
@@ -2931,7 +2931,7 @@ PrefabInstance:
     - target: {fileID: 3748272536826366458, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "trajanje slaganja komponente 4 je u prosjeku zna\u010Dajno du\u017Ee
-        nego slaganje ostalih komponenti"
+        nego slaganje ostalih komponenti."
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536826366458, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2960,7 +2960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536861296814, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "Korisnik je sve komponente slo\u017Eio puno br\u017Ee od prosjeka"
+      value: "Korisnik je sve komponente slo\u017Eio puno br\u017Ee od prosjeka."
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536861296814, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -3081,7 +3081,7 @@ PrefabInstance:
     - target: {fileID: 3748272537228672306, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "Korisniku je trebalo neo\u010Dekivano dugo da slo\u017Ei tre\u0107u
-        komponentu"
+        komponentu."
       objectReference: {fileID: 0}
     - target: {fileID: 3748272537228672306, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_FontSize
