@@ -144,7 +144,7 @@ public class WindowGraph : MonoBehaviour
         UserErrors.text = UserErrors.text + " - " + NumOfErrors.ToString();
         GeneralErrors.text = GeneralErrors.text + " - 2";
 
-        int GenNumOfErrors = 4;
+        int GenNumOfErrors = 2;
         float ErrorDiff = 0;
         if (NumOfErrors > GenNumOfErrors)
         {
