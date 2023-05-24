@@ -56,6 +56,7 @@ public class InteractableObjects : MonoBehaviour
         CPU = GameObject.Find("jarst_processor_11 (1)");
         GPU = GameObject.Find("jarst_graphics_card_1 (1)");
         CPUCOOL = GameObject.Find("jarst_cooling_unit (1)");
+        tips = GameObject.Find("TipsText");
 
         tr = GameObject.Find("Trash").GetComponent<Trash>();
        // MB.SetActive(false);
