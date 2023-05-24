@@ -150,7 +150,7 @@ public class WindowGraph : MonoBehaviour
         if (NumOfErrors > GenNumOfErrors)
         {
             ErrorDiff = (NumOfErrors / GenNumOfErrors);
-            ErrorDiff2 = GenNumOfErrors / NumOfErrors;
+            ErrorDiff2 = (float)GenNumOfErrors / (float)NumOfErrors;
                 Debug.Log(ErrorDiff2+" errDif");
             UserErrorsBar.GetComponent<RectTransform>().localPosition =new Vector3(0, -250,0);
             UserErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 1f, 1);
@@ -163,7 +163,7 @@ public class WindowGraph : MonoBehaviour
                 NumOfErrors = 1;
             }
             ErrorDiff = GenNumOfErrors / NumOfErrors;
-            ErrorDiff2 = (NumOfErrors / GenNumOfErrors);
+            ErrorDiff2 = ((float)NumOfErrors / (float)GenNumOfErrors);
             Debug.Log(ErrorDiff2 + " errDif");
             GeneralErrorsBar.GetComponent<RectTransform>().localPosition = new Vector3(0, -250, 0);
             GeneralErrorsBar.GetComponent<RectTransform>().localScale = new Vector3(1, 1f, 1);
