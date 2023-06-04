@@ -141,8 +141,8 @@ public class WindowGraph : MonoBehaviour
 
         //Mistakes Graph
 
-        UserErrors.text = UserErrors.text + " - " + NumOfErrors.ToString();
-        GeneralErrors.text = GeneralErrors.text + " - 2";
+        UserErrors.text = UserErrors.text + " : " + NumOfErrors.ToString();
+        GeneralErrors.text = GeneralErrors.text + " : 2";
 
         int GenNumOfErrors = 2;
         float ErrorDiff = 0;

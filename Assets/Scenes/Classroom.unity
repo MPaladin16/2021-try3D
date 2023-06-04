@@ -2588,7 +2588,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
     - target: {fileID: 3748272535432526689, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: neprijatelj.
+      value: neprijatelj
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535432526689, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -2612,7 +2612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535504433672, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "prosje\u010Dan broj pogre\u0161aka je ve\u0107i od ciljane vrijednosti."
+      value: "prosje\u010Dan broj pogre\u0161aka je ve\u0107i od ciljane vrijednosti"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535504433672, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -2636,7 +2636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535598418369, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "metoda prikupljanja psihofiziolo\u0161kih mjera."
+      value: "metoda prikupljanja psihofiziolo\u0161kih mjera"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535614400801, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2648,7 +2648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535711919553, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: u papirnatom obliku nakon provedene ankete.
+      value: u papirnatom obliku nakon provedene ankete
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535743678340, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: Correct
@@ -2673,7 +2673,7 @@ PrefabInstance:
     - target: {fileID: 3748272535765061931, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "ve\u0107a je varijacija u vremenima slaganja komponente X u odnosu
-        na komponentu Y. "
+        na komponentu Y"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535765061931, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2705,11 +2705,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272535876970124, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "automatizirano prikupljanje podataka o pona\u0161anju igra\u010Da."
+      value: "automatizirano prikupljanje podataka o pona\u0161anju igra\u010Da"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536025264731, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "prosje\u010Dan broj pogre\u0161aka je manji od ciljane vrijednosti."
+      value: "prosje\u010Dan broj pogre\u0161aka je manji od ciljane vrijednosti"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536025264731, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -2753,7 +2753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536186950490, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "u bazi podataka ili na poslu\u017Eitelju igre."
+      value: "u bazi podataka ili na poslu\u017Eitelju igre"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536243341820, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2766,7 +2766,7 @@ PrefabInstance:
     - target: {fileID: 3748272536250520618, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "za komponentu X, prikupljeni podatci te\u017Ee bli\u017Ee srednjoj
-        vrijednosti nego za komponentu Y."
+        vrijednosti nego za komponentu Y"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536250520618, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2786,7 +2786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536287968406, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "igra\u010Dima je u prosjeku najdulje trebalo da slo\u017Ee prvu komponentu."
+      value: "igra\u010Dima je u prosjeku najdulje trebalo da slo\u017Ee prvu komponentu"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536287968406, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2798,7 +2798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536357943045, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "prosje\u010Dan broj pogre\u0161aka nije zabilje\u017Een."
+      value: "prosje\u010Dan broj pogre\u0161aka nije zabilje\u017Een"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536357943045, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -2818,19 +2818,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536382552459, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: 'kao audiozapis. '
+      value: kao audiozapis
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536471018135, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: prikupljanje podataka uz stalnu ljudsku intervenciju.
+      value: prikupljanje podataka uz stalnu ljudsku intervenciju
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536482758931, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "metoda pra\u0107enja pona\u0161anja igra\u010Da."
+      value: "metoda pra\u0107enja pona\u0161anja igra\u010Da"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536555330405, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: subjektivna metoda.
+      value: subjektivna metoda
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536603123139, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2838,7 +2838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536620051929, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "prosje\u010Dan broj pogre\u0161aka odgovara ciljanoj vrijednosti."
+      value: "prosje\u010Dan broj pogre\u0161aka odgovara ciljanoj vrijednosti"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536620051929, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -2851,7 +2851,7 @@ PrefabInstance:
     - target: {fileID: 3748272536640158448, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "za komponentu Y, prikupljeni podatci te\u017Ee bli\u017Ee srednjoj
-        vrijednosti nego za komponentu X."
+        vrijednosti nego za komponentu X"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536640158448, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2859,7 +2859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536666746462, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "prosje\u010Dan broj gubitaka \u017Eivota na nivou 3 je 3.6."
+      value: "prosje\u010Dan broj gubitaka \u017Eivota na nivou 3 je 3.6"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536666746462, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -2879,11 +2879,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536698109809, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "prikupljanje podataka o mi\u0161ljenju krajnjih korisnika."
+      value: "prikupljanje podataka o mi\u0161ljenju krajnjih korisnika"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536731082783, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "80% igra\u010Da izjavilo je da im je igra prete\u0161ka."
+      value: "80% igra\u010Da izjavilo je da im je igra prete\u0161ka"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536731082783, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -2895,7 +2895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536746404778, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: zamka.
+      value: zamka
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536746404778, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -2907,11 +2907,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536756122798, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: kvalitativna metoda.
+      value: kvalitativna metoda
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536774837405, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: prikupljanje subjektivnih podataka.
+      value: prikupljanje subjektivnih podataka
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536779110772, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_text
@@ -2922,7 +2922,7 @@ PrefabInstance:
     - target: {fileID: 3748272536815140293, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: za komponentu X, podatci su distribuirani dalje od srednje vrijednosti
-        nego za komponentu Y.
+        nego za komponentu Y
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536815140293, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2931,7 +2931,7 @@ PrefabInstance:
     - target: {fileID: 3748272536826366458, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "trajanje slaganja komponente 4 je u prosjeku zna\u010Dajno du\u017Ee
-        nego slaganje ostalih komponenti."
+        nego slaganje ostalih komponenti"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536826366458, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2948,7 +2948,7 @@ PrefabInstance:
     - target: {fileID: 3748272536833543185, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "promatranjem igra\u010Da u\u017Eivo ustanovljeno je da je 8 od 15 igra\u010Da
-        otvorilo help prozor vi\u0161e od dva puta. "
+        otvorilo help prozor vi\u0161e od dva puta"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536833543185, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -2960,7 +2960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536861296814, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: "Korisnik je sve komponente slo\u017Eio puno br\u017Ee od prosjeka."
+      value: "Korisnik je sve komponente slo\u017Eio puno br\u017Ee od prosjeka"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536861296814, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2981,7 +2981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536962144669, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: istek vremena.
+      value: istek vremena
       objectReference: {fileID: 0}
     - target: {fileID: 3748272536962144669, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -3013,11 +3013,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3748272537106735387, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: kao videozapis.
+      value: kao videozapis
       objectReference: {fileID: 0}
     - target: {fileID: 3748272537111411921, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
-      value: istek zdravlja.
+      value: istek zdravlja
       objectReference: {fileID: 0}
     - target: {fileID: 3748272537111411921, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -3046,7 +3046,7 @@ PrefabInstance:
     - target: {fileID: 3748272537126213163, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "prosje\u010Dna subjektivna ocjena grafi\u010Dke kvalitete na skali
-        od 1-5 je 4.1."
+        od 1-5 je 4.1"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272537126213163, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_MinSize
@@ -3081,7 +3081,7 @@ PrefabInstance:
     - target: {fileID: 3748272537228672306, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_Text
       value: "Korisniku je trebalo neo\u010Dekivano dugo da slo\u017Ei tre\u0107u
-        komponentu."
+        komponentu"
       objectReference: {fileID: 0}
     - target: {fileID: 3748272537228672306, guid: 0f7dc52d76d398d49b159cfd324b8c17, type: 3}
       propertyPath: m_FontData.m_FontSize
