@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using System;
 using UnityEngine.UI;
 
 public class WindowGraph : MonoBehaviour
@@ -27,12 +28,16 @@ public class WindowGraph : MonoBehaviour
     [SerializeField] private GameObject errorCanvas;
 
     [SerializeField] private List<TextMeshProUGUI> times;
+
+
+
     private void Start()
     {
         infoBtn.onClick.AddListener(GetInfo);
         errorCanvas.SetActive(false);
 
-    }
+
+}
     private GameObject CreateCircleUser(Vector2 pos) {
         GameObject gameObject = new GameObject("circle", typeof(Image));
         gameObject.transform.SetParent(graphContainer, false);
@@ -147,6 +152,12 @@ public class WindowGraph : MonoBehaviour
         int GenNumOfErrors = 2;
         float ErrorDiff = 0;
         float ErrorDiff2 = 1;
+
+        if (NumOfErrors > 10) {
+            System.Random random = new System.Random();
+            int randInt = random.Next(1, 4);
+            NumOfErrors = 6 + randInt;
+        }
         if (NumOfErrors > GenNumOfErrors)
         {
             ErrorDiff = (NumOfErrors / GenNumOfErrors);
