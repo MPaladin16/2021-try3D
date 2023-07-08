@@ -81,7 +81,7 @@ public class QuizController : MonoBehaviour
     {
         GameObject currentPage = _quizPages[_questionOrder[_currentPageNo]];
 
-        if (_currentPageNo < _quizPages.Count-2)
+        if (_currentPageNo < _quizPages.Count-1)
         {
             GameObject nextPage = _quizPages[_questionOrder[_currentPageNo + 1]];
             ShowNextQuestion(currentPage, nextPage);
