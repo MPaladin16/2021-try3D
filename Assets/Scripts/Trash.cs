@@ -32,8 +32,8 @@ public class Trash : MonoBehaviour
             Debug.Log("Error+1");
             numofErrors++;
             flag = 1;
+            Invoke("releaseFlag", 1f);
         }
-        else { }
     }
 
     public void releaseFlag()
